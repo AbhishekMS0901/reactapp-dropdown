@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+// Importing the CSS file for styling the App component
+import "./App.css";
 
+// Importing the Dropdown component from the specified path
+import { Dropdown } from "./Components/dropDown";
+
+// Function component representing the main App
 function App() {
+  // Defining the dropdown values to be displayed
+  const dropDownValues = ["Yes", "Probably not"];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {/* Heading for the dropdown question */}
+      <h1 id="dropdownHeader">Should you use a dropdown?</h1>
+
+      {/* Rendering the Dropdown component and passing the values as props */}
+      <Dropdown values={dropDownValues} />
     </div>
   );
 }
 
+// Exporting the App component as the default export
 export default App;
